@@ -7,15 +7,18 @@ public class CompanyApp {
     private String firstName;
     private String lastName;
     private String userName;
+    private String department;
 
     public CompanyApp() {
 
-        setFirstName();
-        System.out.println(firstName);
-        setLastName();
-        System.out.println(lastName);
-        setUserName();
-        System.out.println(userName);
+//        setFirstName();
+//        System.out.println(firstName);
+//        setLastName();
+//        System.out.println(lastName);
+//        setUserName();
+//        System.out.println(userName);
+//        setDepartment();
+//        System.out.println(department);
 
     }
 
@@ -45,5 +48,42 @@ public class CompanyApp {
 
     private void setUserName() {
         this.userName = this.firstName + " " + this.lastName;
+    }
+
+    private void setDepartment() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Choose Your Code : \n" +
+                         "  1 - Accounting\n" +
+                         "  2 - Development\n" +
+                         "  3 - Sales\n" +
+                         "  4 - Design\n" +
+                         "  5 - none");
+
+        System.out.print("Enter Your Choice : ");
+        int userInput = scanner.nextInt();
+        
+        if (userInput < 6 && userInput > 0) {
+            switch (userInput) {
+                case 1:
+                    this.department = "acc";
+                    break;
+                case 2:
+                    this.department = "dev";
+                    break;
+                case 3:
+                    this.department = "sales";
+                    break;
+                case 4:
+                    this.department = "design";
+                    break;
+                default:
+                    this.department = "";
+            }
+
+        } else {
+            System.err.println("Invalid Choice!!");
+            setDepartment();
+        }
     }
 }
