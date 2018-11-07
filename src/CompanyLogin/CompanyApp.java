@@ -22,22 +22,22 @@ public class CompanyApp {
 
     public CompanyApp() {
 
-//        setFirstName();
-//        System.out.println(firstName);
-//        setLastName();
-//        System.out.println(lastName);
-//        setUserName();
-//        System.out.println(userName);
-//        setDepartment();
-//        System.out.println(department);
-//        generateEmail();
-//        randomPasswordGenerator(passwordLength);
+        setFirstName();
+        System.out.println(firstName);
+        setLastName();
+        System.out.println(lastName);
+        setUserName();
+        System.out.println(userName);
+        setDepartment();
+        System.out.println(department);
+        generateEmail();
+//        randomPasswordGenerator();
 //        System.out.println(password);
-//        setPassword();
-//        setAlternativeEmail();
-//        System.out.println(alternativeEmail);
-//        setMailboxCapacity();
-//        System.out.println(mailboxCapacity);
+        setPassword();
+        setAlternativeEmail();
+        System.out.println(alternativeEmail);
+        setMailboxCapacity();
+        System.out.println(mailboxCapacity);
         setSecurityQuestion();
         System.out.println(securityQuestion);
         System.out.println(securityAnswer);
