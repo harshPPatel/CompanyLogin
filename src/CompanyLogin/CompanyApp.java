@@ -8,17 +8,19 @@ public class CompanyApp {
     private String lastName;
     private String userName;
     private String department;
+    final private String companySuffix = "company.com";
 
     public CompanyApp() {
 
-//        setFirstName();
-//        System.out.println(firstName);
-//        setLastName();
-//        System.out.println(lastName);
-//        setUserName();
-//        System.out.println(userName);
-//        setDepartment();
-//        System.out.println(department);
+        setFirstName();
+        System.out.println(firstName);
+        setLastName();
+        System.out.println(lastName);
+        setUserName();
+        System.out.println(userName);
+        setDepartment();
+        System.out.println(department);
+        generateEmail();
 
     }
 
@@ -62,7 +64,7 @@ public class CompanyApp {
 
         System.out.print("Enter Your Choice : ");
         int userInput = scanner.nextInt();
-        
+
         if (userInput < 6 && userInput > 0) {
             switch (userInput) {
                 case 1:
@@ -85,5 +87,17 @@ public class CompanyApp {
             System.err.println("Invalid Choice!!");
             setDepartment();
         }
+    }
+
+    private void generateEmail() {
+        String output;
+        if (this.department.equals("")) {
+            output = this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() +
+                    "@" + this.companySuffix;
+        } else {
+            output = this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() +
+                    "@" + this.department + "." + this.companySuffix;
+        }
+        System.out.println(output);
     }
 }
