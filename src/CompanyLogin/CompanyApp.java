@@ -1,27 +1,33 @@
 package CompanyLogin;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class CompanyApp {
 
+    private int passwordLength;
     private String firstName;
     private String lastName;
     private String userName;
     private String department;
+    private String password;
+    final private String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@%$";
     final private String companySuffix = "company.com";
 
     public CompanyApp() {
 
-        setFirstName();
-        System.out.println(firstName);
-        setLastName();
-        System.out.println(lastName);
-        setUserName();
-        System.out.println(userName);
-        setDepartment();
-        System.out.println(department);
-        generateEmail();
-
+//        setFirstName();
+//        System.out.println(firstName);
+//        setLastName();
+//        System.out.println(lastName);
+//        setUserName();
+//        System.out.println(userName);
+//        setDepartment();
+//        System.out.println(department);
+//        generateEmail();
+//        randomPasswordGenerator(passwordLength);
+//        System.out.println(password);
+        setPassword();
     }
 
     private void setFirstName() {
@@ -99,5 +105,91 @@ public class CompanyApp {
                     "@" + this.department + "." + this.companySuffix;
         }
         System.out.println(output);
+    }
+
+    private void setPasswordLength() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Password Length : ");
+        int userInput;
+        userInput = scanner.nextInt();
+
+        if (userInput > 0 && userInput < 25) {
+            this.passwordLength = userInput;
+        } else {
+            System.err.println("Invalid Input! Enter only between 0 and 25.");
+            setPasswordLength();
+        }
+    }
+
+    private void setPassword() {
+        System.out.println("Choose Your Code : \n" +
+                "  1 - Random Generated Password\n" +
+                "  2 - Custom Generated Password");
+
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
+
+        if (userInput == 1) {
+            //Random Password Method
+            randomPasswordGenerator();
+            System.out.println(password);
+        } else if (userInput == 2) {
+            //Custom Password Method
+            customPasswordGenerator();
+            System.out.println(password);
+        } else {
+            System.err.println("Invalid Input!!");
+            setPassword();
+        }
+    }
+
+    private void randomPasswordGenerator() {
+
+        setPasswordLength();
+
+        char[] password = new char[this.passwordLength];
+
+        for (int i = 0; i < this.passwordLength; i++) {
+            Random random = new Random();
+            int randomNumber = random.nextInt(passwordSet.length());
+            password[i] = this.passwordSet.charAt(randomNumber);
+        }
+
+        this.password = new String(password);
+
+    }
+
+    private void customPasswordGenerator() {
+
+        setPasswordLength();
+
+        boolean isValid = true;
+        System.out.print("Enter Your Password : ");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        if (userInput.length() == this.passwordLength) {
+            for (int i = 0; i < this.passwordLength; i++) {
+
+                char passswordCharacter = userInput.charAt(i);
+                if (this.passwordSet.indexOf(passswordCharacter) == -1 ) {
+                    isValid = false;
+                    System.err.println("Invalid Password!");
+                    break;
+                }
+
+            }
+        } else {
+            System.err.println("Out of Password Length!!");
+            customPasswordGenerator();
+        }
+        if (isValid) {
+            this.password = userInput;
+        } else {
+            System.err.println("Enter characters from A to Z, a to z , 0 to 9 or !, @, %, $.");
+            customPasswordGenerator();
+        }
+
+
     }
 }
