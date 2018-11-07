@@ -235,13 +235,24 @@ public class CompanyApp {
     private void setSecurityQuestion() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Security Question : ");
-        this.securityQuestion = scanner.nextLine();
-        setSecurityAnswer();
+        String userInput = scanner.nextLine();
+        if (userInput.isEmpty()){
+            setSecurityQuestion();
+        } else {
+            this.securityQuestion = userInput;
+            setSecurityAnswer();
+        }
+
     }
 
     private void setSecurityAnswer() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Security Answer : ");
-        this.securityAnswer = scanner.nextLine();
+        String userInput = scanner.nextLine();
+        if (userInput.isEmpty()){
+            setSecurityAnswer();
+        } else {
+            this.securityAnswer = userInput;
+        }
     }
 }
