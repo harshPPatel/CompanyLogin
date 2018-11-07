@@ -15,6 +15,7 @@ public class CompanyApp {
     private String alternativeEmail;
     private String securityQuestion;
     private String securityAnswer;
+    private String email;
     final private String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@%$";
     final private String companySuffix = "company.com";
 
@@ -117,6 +118,7 @@ public class CompanyApp {
             output = this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() +
                     "@" + this.department + "." + this.companySuffix;
         }
+        this.email = output;
         System.out.println(output);
     }
 
@@ -253,6 +255,201 @@ public class CompanyApp {
             setSecurityAnswer();
         } else {
             this.securityAnswer = userInput;
+        }
+    }
+
+    private boolean passwordAuthentication() {
+        System.out.print("Enter current Password : ");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        return userInput.equals(this.password);
+    }
+
+    private void passwordOption() {
+        if (!passwordAuthentication()){
+            System.out.println("Choose your Code \n" +
+                    "  1 - Retrieve Password\n" +
+                    "  2 - Change Password\n" +
+                    "  3 - To Exit");
+            while (true) {
+                Scanner scanner = new Scanner(System.in);
+                int userInput = scanner.nextInt();
+                if (userInput < 1 || userInput > 3) {
+                    System.err.println("Invalid Input!!");
+                    passwordOption();
+                } else {
+                    switch (userInput) {
+                        case 1:
+                            retrievePassword();
+                            break;
+                        case 2:
+                            changePassword();
+                            break;
+                        default:
+                            return;
+                    }
+                }
+            }
+        }
+    }
+
+    private void retrievePassword() {
+        System.out.println("RETRIEVE PASSWORD PROCESS : ");
+        //Security Question Authentication
+        if (securityQuestionAuthentication()) {
+            System.out.println("Your Current Password : " + this.password);
+        } else {
+            System.err.println("WRONG ANSWER!");
+            retrievePassword();
+        }
+    }
+
+    private void changePassword() {
+        System.out.println("CHANGE PASSWORD PROCESS : ");
+        if (securityQuestionAuthentication()) {
+            setPassword();
+        } else {
+            System.err.println("WRONG ANSWER!");
+            changePassword();
+        }
+    }
+
+    private boolean securityQuestionAuthentication() {
+        System.out.println("SECURITY QUESTION");
+        System.out.println(this.securityQuestion);
+        System.out.print("ANSWER : ");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        return userInput.equalsIgnoreCase(this.securityAnswer);
+    }
+
+    private boolean userNameAuthentication() {
+        System.out.println("USER AUTHENTICATION");
+        System.out.print("Enter email : ");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        return userInput.equals(this.email);
+    }
+
+    private void changeSecurityQuestion() {
+        if (passwordAuthentication()) {
+            setSecurityQuestion();
+            setSecurityAnswer();
+        } else {
+            System.err.println("INVALID PASSWORD");
+            passwordOption();
+            changeSecurityQuestion();
+        }
+    }
+
+    private String getInformation() {
+        return "First Name : " + this.firstName +
+                "\nLast Name  : " + this.lastName +
+                "\nMailBox Capacity : " + this.mailboxCapacity;
+    }
+
+    private String getFullInformation() {
+        String output = "";
+        if (passwordAuthentication()) {
+            output = "First Name : " + this.firstName +
+                    "\nLast Name  : " + this.lastName +
+                    "\nMailBox Capacity : " + this.mailboxCapacity +
+                    "\nPassword : " + this.password +
+                    "\nAlternative Email : " + this.alternativeEmail +
+                    "\nSecurity Question : " + this.securityQuestion +
+                    "\nSecurity Answer : " + this.securityAnswer;
+        }else {
+            System.err.println("AUTHENTICATION FAILED!");
+            passwordOption();
+            getFullInformation();
+        }
+        return output;
+    }
+
+    private void updateMailboxCapacity() {
+        if (passwordAuthentication()) {
+            setMailboxCapacity();
+        } else {
+            System.err.println("INVALID PASSWORD!");
+            passwordOption();
+            updateMailboxCapacity();
+        }
+    }
+
+    private void updateAlternativeEmail() {
+        if (passwordAuthentication()) {
+            setAlternativeEmail();
+        } else {
+            System.err.println("INVALID PASSWORD!");
+            passwordOption();
+            updateAlternativeEmail();
+        }
+    }
+
+    public void logIn(){
+        System.out.println("Login Method");
+        if (userNameAuthentication()) {
+            if (passwordAuthentication()) {
+                logInInstruction();
+            } else {
+                System.err.println("AUTHENTICATION FAILED!");
+                passwordOption();
+                logIn();
+            }
+        } else {
+            System.err.println("Invalid Email!!");
+            logIn();
+        }
+    }
+
+    private void logInInstruction() {
+        System.out.println("Choose your Code : \n" +
+                "  1 - To get Information\n" +
+                "  2 - To get Full Information\n" +
+                "  3 - To Change Password\n" +
+                "  4 - To Change Security Question\n" +
+                "  5 - To Update Mail Box Capacity\n" +
+                "  6 - To Update Alternative Email\n" +
+                "  7 - To Log Out");
+        while (true) {
+            System.out.print("Enter Your Choice : ");
+            Scanner scanner = new Scanner(System.in);
+            int userInput = scanner.nextInt();
+
+            if (userInput < 1 || userInput > 7) {
+                System.err.println("Invalid Input!!");
+                return;
+            } else {
+
+                switch (userInput) {
+                    case 1:
+                        //get Info Method
+                        System.out.println(getInformation());
+                        break;
+                    case 2:
+                        //get Full info
+                        System.out.println(getFullInformation());
+                        break;
+                    case 3:
+                        //change pass
+                        changePassword();
+                        break;
+                    case 4:
+                        //change security que
+                        changeSecurityQuestion();
+                        break;
+                    case 5:
+                        //update mailbox capacity
+                        updateMailboxCapacity();
+                        break;
+                    case 6:
+                        //update alternaative email
+                        updateAlternativeEmail();
+                        break;
+                    default:
+                        return;
+                }
+            }
         }
     }
 }

@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
         int userStartChoice;
+        CompanyApp employee = null;
 
 
         while (true) {
@@ -21,10 +22,16 @@ public class Main {
             switch (userStartChoice) {
                 case 1:
                     System.out.println("Log In");
+                    if (employee == null) {
+                        System.err.println("No User Found!! Sign Up First.");
+                        break;
+                    } else {
+                        employee.logIn();
+                    }
                     break;
                 case 2:
                     System.out.println("Sign Up");
-                    CompanyApp employee = new CompanyApp();
+                    employee = new CompanyApp();
                     break;
                 case 3:
                     return;

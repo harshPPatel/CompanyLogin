@@ -21,12 +21,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4681" />
+          <entry key="java" value="8045" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4681" />
+          <entry key="JAVA" value="8045" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -49,22 +49,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CompanyLogin/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+            <state relative-caret-position="866">
+              <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CompanyLogin/CompanyApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="34" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+            <state relative-caret-position="-1258">
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#CompanyApp#0;class#CompanyApp#0" />
                 <element signature="method#setFirstName#0;class#CompanyApp#0" />
                 <element signature="method#setLastName#0;class#CompanyApp#0" />
                 <element signature="method#setDepartment#0;class#CompanyApp#0" />
@@ -77,6 +78,19 @@
                 <element signature="method#setMailboxCapacity#0;class#CompanyApp#0" />
                 <element signature="method#setSecurityQuestion#0;class#CompanyApp#0" />
                 <element signature="method#setSecurityAnswer#0;class#CompanyApp#0" />
+                <element signature="method#passwordAuthentication#0;class#CompanyApp#0" />
+                <element signature="method#passwordOption#0;class#CompanyApp#0" />
+                <element signature="method#retrievePassword#0;class#CompanyApp#0" />
+                <element signature="method#changePassword#0;class#CompanyApp#0" />
+                <element signature="method#securityQuestionAuthentication#0;class#CompanyApp#0" />
+                <element signature="method#userNameAuthentication#0;class#CompanyApp#0" />
+                <element signature="method#changeSecurityQuestion#0;class#CompanyApp#0" />
+                <element signature="method#getInformation#0;class#CompanyApp#0" />
+                <element signature="method#getFullInformation#0;class#CompanyApp#0" />
+                <element signature="method#updateMailboxCapacity#0;class#CompanyApp#0" />
+                <element signature="method#updateAlternativeEmail#0;class#CompanyApp#0" />
+                <element signature="method#logIn#0;class#CompanyApp#0" />
+                <element signature="method#logInInstruction#0;class#CompanyApp#0" />
               </folding>
             </state>
           </provider>
@@ -97,12 +111,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/CompanyLogin/CompanyApp.java" />
         <option value="$PROJECT_DIR$/src/CompanyLogin/Main.java" />
+        <option value="$PROJECT_DIR$/src/CompanyLogin/CompanyApp.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="102" />
     <option name="y" value="-19" />
     <option name="width" value="1346" />
@@ -141,7 +155,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541609281597" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541616608559" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -228,7 +242,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3167028" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3167028" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -260,12 +274,20 @@
     <entry file="file://$PROJECT_DIR$/CompanyLogin.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompanyLogin/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="866">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CompanyLogin/CompanyApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="34" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        <state relative-caret-position="-1258">
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#CompanyApp#0;class#CompanyApp#0" />
             <element signature="method#setFirstName#0;class#CompanyApp#0" />
             <element signature="method#setLastName#0;class#CompanyApp#0" />
             <element signature="method#setDepartment#0;class#CompanyApp#0" />
@@ -278,14 +300,20 @@
             <element signature="method#setMailboxCapacity#0;class#CompanyApp#0" />
             <element signature="method#setSecurityQuestion#0;class#CompanyApp#0" />
             <element signature="method#setSecurityAnswer#0;class#CompanyApp#0" />
+            <element signature="method#passwordAuthentication#0;class#CompanyApp#0" />
+            <element signature="method#passwordOption#0;class#CompanyApp#0" />
+            <element signature="method#retrievePassword#0;class#CompanyApp#0" />
+            <element signature="method#changePassword#0;class#CompanyApp#0" />
+            <element signature="method#securityQuestionAuthentication#0;class#CompanyApp#0" />
+            <element signature="method#userNameAuthentication#0;class#CompanyApp#0" />
+            <element signature="method#changeSecurityQuestion#0;class#CompanyApp#0" />
+            <element signature="method#getInformation#0;class#CompanyApp#0" />
+            <element signature="method#getFullInformation#0;class#CompanyApp#0" />
+            <element signature="method#updateMailboxCapacity#0;class#CompanyApp#0" />
+            <element signature="method#updateAlternativeEmail#0;class#CompanyApp#0" />
+            <element signature="method#logIn#0;class#CompanyApp#0" />
+            <element signature="method#logInInstruction#0;class#CompanyApp#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompanyLogin/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
         </state>
       </provider>
     </entry>
