@@ -11,6 +11,7 @@ public class CompanyApp {
     private String userName;
     private String department;
     private String password;
+    private String alternativeEmail;
     final private String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@%$";
     final private String companySuffix = "company.com";
 
@@ -27,7 +28,9 @@ public class CompanyApp {
 //        generateEmail();
 //        randomPasswordGenerator(passwordLength);
 //        System.out.println(password);
-        setPassword();
+//        setPassword();
+        setAlternativeEmail();
+        System.out.println(alternativeEmail);
     }
 
     private void setFirstName() {
@@ -191,5 +194,19 @@ public class CompanyApp {
         }
 
 
+    }
+
+    private void setAlternativeEmail() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Alternative Email : ");
+        String userInput = scanner.nextLine();
+
+        if (userInput.contains("@") && userInput.contains(".com")) {
+            this.alternativeEmail = userInput;
+        } else {
+            System.err.println("Invalid Email!");
+            setAlternativeEmail();
+        }
     }
 }
