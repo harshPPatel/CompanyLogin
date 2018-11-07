@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CompanyApp {
 
     private int passwordLength;
+    private int mailboxCapacity;
     private String firstName;
     private String lastName;
     private String userName;
@@ -29,8 +30,10 @@ public class CompanyApp {
 //        randomPasswordGenerator(passwordLength);
 //        System.out.println(password);
 //        setPassword();
-        setAlternativeEmail();
-        System.out.println(alternativeEmail);
+//        setAlternativeEmail();
+//        System.out.println(alternativeEmail);
+        setMailboxCapacity();
+        System.out.println(mailboxCapacity);
     }
 
     private void setFirstName() {
@@ -173,14 +176,12 @@ public class CompanyApp {
         String userInput = scanner.nextLine();
         if (userInput.length() == this.passwordLength) {
             for (int i = 0; i < this.passwordLength; i++) {
-
                 char passswordCharacter = userInput.charAt(i);
                 if (this.passwordSet.indexOf(passswordCharacter) == -1 ) {
                     isValid = false;
                     System.err.println("Invalid Password!");
                     break;
                 }
-
             }
         } else {
             System.err.println("Out of Password Length!!");
@@ -207,6 +208,20 @@ public class CompanyApp {
         } else {
             System.err.println("Invalid Email!");
             setAlternativeEmail();
+        }
+    }
+
+    private void setMailboxCapacity() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Mailbox Capacity : ");
+        int userInput = scanner.nextInt();
+
+        if (userInput >= 50 && userInput <= 1000) {
+            this.mailboxCapacity = userInput;
+        } else {
+            System.err.println("Invalid Input! Enter between 50 to 1000!");
+            setMailboxCapacity();
         }
     }
 }
