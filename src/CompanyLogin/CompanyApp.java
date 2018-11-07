@@ -13,8 +13,12 @@ public class CompanyApp {
     private String department;
     private String password;
     private String alternativeEmail;
+    private String securityQuestion;
+    private String securityAnswer;
     final private String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@%$";
     final private String companySuffix = "company.com";
+
+    // TODO: 07-11-2018 ADD GETTERS IF NEEDED
 
     public CompanyApp() {
 
@@ -32,8 +36,11 @@ public class CompanyApp {
 //        setPassword();
 //        setAlternativeEmail();
 //        System.out.println(alternativeEmail);
-        setMailboxCapacity();
-        System.out.println(mailboxCapacity);
+//        setMailboxCapacity();
+//        System.out.println(mailboxCapacity);
+        setSecurityQuestion();
+        System.out.println(securityQuestion);
+        System.out.println(securityAnswer);
     }
 
     private void setFirstName() {
@@ -223,5 +230,21 @@ public class CompanyApp {
             System.err.println("Invalid Input! Enter between 50 to 1000!");
             setMailboxCapacity();
         }
+    }
+
+    private void setSecurityQuestion() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Security Question : ");
+        String userInput = scanner.nextLine();
+        this.securityQuestion = userInput;
+
+        setSecurityAnswer();
+    }
+
+    private void setSecurityAnswer() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Security Answer : ");
+        String userInput = scanner.nextLine();
+        this.securityAnswer = userInput;
     }
 }
