@@ -26,6 +26,7 @@ public class Main {
                 case 2:
                     System.out.println("Sign Up");
                     i++;
+                    CompanyApp employee = new CompanyApp();
                     break;
                 default:
                     System.out.println("\nEnter Valid Input!!");
