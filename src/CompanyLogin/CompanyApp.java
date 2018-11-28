@@ -3,8 +3,20 @@ package CompanyLogin;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * CompanyApp : Class containing different methods and basic constructor for the CompanyApp.
+ *
+ * @author Harsh
+ * @version 1
+ *
+ * Date Created: 28-11-2018
+ * Last Updated: 28-11-2018
+ *
+ */
+
 public class CompanyApp {
 
+    /* Variables */
     private int passwordLength;
     private int mailboxCapacity;
     private String firstName;
@@ -19,8 +31,9 @@ public class CompanyApp {
     final private String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@%$";
     final private String companySuffix = "company.com";
 
-    // TODO: 07-11-2018 ADD GETTERS IF NEEDED
-
+    /**
+     * Constructor which runs methods to create employee account
+     */
     public CompanyApp() {
 
         setFirstName();
@@ -32,8 +45,6 @@ public class CompanyApp {
         setDepartment();
         System.out.println(department);
         generateEmail();
-//        randomPasswordGenerator();
-//        System.out.println(password);
         setPassword();
         setAlternativeEmail();
         System.out.println(alternativeEmail);
@@ -44,6 +55,9 @@ public class CompanyApp {
         System.out.println(securityAnswer);
     }
 
+    /**
+     * Print the message, takes input from user, validate it and set it to the variable firstName
+     */
     private void setFirstName() {
         System.out.print("Enter First Name : ");
         Scanner in = new Scanner(System.in);
@@ -56,6 +70,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Print the message, takes input from user, validate it and set it to the variable lastName
+     */
     private void setLastName() {
         System.out.print("Enter Last Name : ");
         Scanner in = new Scanner(System.in);
@@ -68,10 +85,16 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Concatenate first and last name and creates userName
+     */
     private void setUserName() {
         this.userName = this.firstName + " " + this.lastName;
     }
 
+    /**
+     * Print list of different options, takes input from user, validates the input and set the department for the employee
+     */
     private void setDepartment() {
         Scanner scanner = new Scanner(System.in);
 
@@ -109,6 +132,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Concat firstName, lastName, companySuffix to create email ID for employee
+     */
     private void generateEmail() {
         String output;
         if (this.department.equals("")) {
@@ -122,6 +148,9 @@ public class CompanyApp {
         System.out.println(output);
     }
 
+    /**
+     * Ask user to enter the length of the password, validate it and set the value for further process
+     */
     private void setPasswordLength() {
         Scanner scanner = new Scanner(System.in);
 
@@ -137,6 +166,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Provides user two different options (Random Generate Or Custom Generated Password), validates the input an drun according methods
+     */
     private void setPassword() {
         System.out.println("Choose Your Code : \n" +
                 "  1 - Random Generated Password\n" +
@@ -159,6 +191,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Use setPasswordLength() method, creates random generated password
+     */
     private void randomPasswordGenerator() {
 
         setPasswordLength();
@@ -175,6 +210,9 @@ public class CompanyApp {
 
     }
 
+    /**
+     * Use setPasswordLength() method, creates custom generated password
+     */
     private void customPasswordGenerator() {
 
         setPasswordLength();
@@ -206,6 +244,9 @@ public class CompanyApp {
 
     }
 
+    /**
+     * Ask for alternative email, validates user input and set the alternativeEmail
+     */
     private void setAlternativeEmail() {
         Scanner scanner = new Scanner(System.in);
 
@@ -220,6 +261,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Ask for mailbox Capacity, validates it and sets the mailboxCapacity
+     */
     private void setMailboxCapacity() {
         Scanner scanner = new Scanner(System.in);
 
@@ -234,6 +278,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Ask user for setting up security question
+     */
     private void setSecurityQuestion() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Security Question : ");
@@ -247,6 +294,9 @@ public class CompanyApp {
 
     }
 
+    /**
+     * Ask users, validates input and set securityAnswer
+     */
     private void setSecurityAnswer() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Security Answer : ");
@@ -258,6 +308,10 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Ask user to enter password, authenticate it and return boolean value
+     * @return true if authentication is successful; false otherwise
+     */
     private boolean passwordAuthentication() {
         System.out.print("Enter current Password : ");
         Scanner scanner = new Scanner(System.in);
@@ -265,6 +319,9 @@ public class CompanyApp {
         return userInput.equals(this.password);
     }
 
+    /**
+     * If User enters wrong password, prints two option to the user, Retrieve Password or change the password
+     */
     private void passwordOption() {
         if (!passwordAuthentication()){
             System.out.println("Choose your Code \n" +
@@ -293,6 +350,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Runs securityQuestionAuthentication, if it is successful, prints employee current password
+     */
     private void retrievePassword() {
         System.out.println("RETRIEVE PASSWORD PROCESS : ");
         //Security Question Authentication
@@ -304,6 +364,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Runs securityQuestionAuthentication, if it is successful, runs setPassword method
+     */
     private void changePassword() {
         System.out.println("CHANGE PASSWORD PROCESS : ");
         if (securityQuestionAuthentication()) {
@@ -314,6 +377,10 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * ask user for security question, and take input of security answer, if it matches, return true
+     * @return true if Successful; false otherwise
+     */
     private boolean securityQuestionAuthentication() {
         System.out.println("SECURITY QUESTION");
         System.out.println(this.securityQuestion);
@@ -323,6 +390,10 @@ public class CompanyApp {
         return userInput.equalsIgnoreCase(this.securityAnswer);
     }
 
+    /**
+     * ask user for email(username), and take input, if it matches, return true
+     * @return true if Successful; false otherwise
+     */
     private boolean userNameAuthentication() {
         System.out.println("USER AUTHENTICATION");
         System.out.print("Enter email : ");
@@ -331,6 +402,9 @@ public class CompanyApp {
         return userInput.equals(this.email);
     }
 
+    /**
+     * Runs passwordAuthentication, if it is true, it runs setSecurityQuestion and setSecurityAnswer
+     */
     private void changeSecurityQuestion() {
         if (passwordAuthentication()) {
             setSecurityQuestion();
@@ -342,12 +416,20 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Print out short hand information
+     * @return formatted employee data
+     */
     private String getInformation() {
         return "First Name : " + this.firstName +
                 "\nLast Name  : " + this.lastName +
                 "\nMailBox Capacity : " + this.mailboxCapacity;
     }
 
+    /**
+     * runs passwordAuthentication, if successful, prints full data
+     * @return formatted employee full data
+     */
     private String getFullInformation() {
         String output = "";
         if (passwordAuthentication()) {
@@ -366,6 +448,9 @@ public class CompanyApp {
         return output;
     }
 
+    /**
+     * runs passwordAuthentication, if it is successful, updates the mailbox Capacity
+     */
     private void updateMailboxCapacity() {
         if (passwordAuthentication()) {
             setMailboxCapacity();
@@ -376,6 +461,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * runs passwordAuthentication, if it is successful, updates the alternative Email
+     */
     private void updateAlternativeEmail() {
         if (passwordAuthentication()) {
             setAlternativeEmail();
@@ -386,6 +474,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Login method which runs userNameAuthentication and passwordAuthentication, if it is successful log in the user
+     */
     public void logIn(){
         System.out.println("Login Method");
         if (userNameAuthentication()) {
@@ -402,6 +493,9 @@ public class CompanyApp {
         }
     }
 
+    /**
+     * Prints the list of different commands available, and also takess input from user and run appropriate methods
+     */
     private void logInInstruction() {
         System.out.println("Choose your Code : \n" +
                 "  1 - To get Information\n" +

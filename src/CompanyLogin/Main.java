@@ -2,6 +2,17 @@ package CompanyLogin;
 
 import java.util.Scanner;
 
+/**
+ * Main : Contains main method, provides option of LogIn or SignUp to the user and use the CompanyApp Class
+ *
+ * @author Harsh
+ * @version 1
+ *
+ * Date Created: 28-11-2018
+ * Last Updated: 28-11-2018
+ *
+ */
+
 public class Main {
 
     public static void main(String[] args) {
