@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c1bb194-e869-43ad-9cd3-142dbc07c093" name="Default Changelist" comment="" />
+    <list default="true" id="9c1bb194-e869-43ad-9cd3-142dbc07c093" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/CompanyApp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/class-use/CompanyApp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/class-use/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/CompanyLogin/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-1.10.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Documentation/type-search-index.zip" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +109,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CompanyLogin/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
@@ -60,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CompanyLogin/CompanyApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="-4832">
               <caret line="5" selection-start-line="5" selection-end-line="14" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -136,7 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543436187503" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543436600113" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -255,9 +313,16 @@
     <entry file="file://$PROJECT_DIR$/CompanyLogin.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompanyLogin/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CompanyLogin/CompanyApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="-4832">
           <caret line="5" selection-start-line="5" selection-end-line="14" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -268,13 +333,6 @@
             <element signature="method#updateMailboxCapacity#0;class#CompanyApp#0" />
             <element signature="method#updateAlternativeEmail#0;class#CompanyApp#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompanyLogin/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
