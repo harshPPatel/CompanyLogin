@@ -1,4 +1,4 @@
-# CompanyLogin
+# Company Login
 
 Simple CLI based authentication created in Java language.
 
